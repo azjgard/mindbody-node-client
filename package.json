@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/azjgard/mindbody-node-client.git"
   },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "soap": "~0.4.7"
+  },
   "author": "Jordin Gardner",
   "license": "ISC",
   "bugs": {
