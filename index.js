@@ -75,8 +75,8 @@ class MindBodyAPI {
 
     const params = {
       Request: {
-        SourceCredentials,
-        UserCredentials,
+        SourceCredentials: this.SourceCredentials,
+        UserCredentials: this.UserCredentials,
         Clients: {Client},
       },
     };
