@@ -36,7 +36,7 @@ Feel free to contribute!
 const MindBodyAPI = require('mindbody-node-client');
 const mindBodyAPI = new MindBodyAPI();
 
-mindBodyAPI.getClient().then(result => {
+mindBodyAPI.GetClients().then(result => {
   console.log(result);
   // do some stuff with the client
 });
@@ -61,7 +61,7 @@ const mindBodyAPI = new MindBodyAPI({
   password: 'bar',
 });
 
-mindBodyAPI.getClient().then(result => {
+mindBodyAPI.GetClients().then(result => {
   console.log(result);
   // do some stuff with the client
 });
