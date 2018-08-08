@@ -10,13 +10,13 @@ const randomString = x =>
     .slice(-1 * x);
 
 describe('Client Service', function() {
-  describe('createClient', function() {
+  describe('AddOrUpdateClients', function() {
     it('should successfully create a new client', async function() {
       this.timeout(5000);
 
       const randomEmail = `${randomString(8)}@test.com`;
 
-      const result = await MindBodyAPI.createClient({
+      const result = await MindBodyAPI.AddOrUpdateClients({
         Email: randomEmail,
         Username: randomEmail,
         FirstName: 'Foo',
@@ -34,11 +34,11 @@ describe('Client Service', function() {
     });
   });
 
-  describe('getClient', function() {
+  describe('GetClients', function() {
     it('should successfully return a list of clients', async function() {
       this.timeout(5000);
 
-      const result = await MindBodyAPI.getClient();
+      const result = await MindBodyAPI.GetClients();
 
       assert.equal('Success', result.GetClientsResult.Status);
     });

@@ -49,7 +49,7 @@ class MindBodyAPI {
     };
   }
 
-  async authenticateSite(siteID) {
+  async GetActivationCode(siteID) {
     const client = await connectSiteService();
 
     const params = {
@@ -70,7 +70,7 @@ class MindBodyAPI {
       ),
     );
   }
-  async createClient(Client) {
+  async AddOrUpdateClients(Client) {
     const client = await connectClientService();
 
     const params = {
@@ -93,7 +93,7 @@ class MindBodyAPI {
       ),
     );
   }
-  async getClient(data = {}) {
+  async GetClients(data = {}) {
     const client = await connectClientService();
 
     const params = {
