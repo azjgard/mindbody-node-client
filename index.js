@@ -100,9 +100,15 @@ class MindBodyAPI {
       Request: {
         SourceCredentials: this.SourceCredentials,
         UserCredentials: this.UserCredentials,
-        SearchText: data.searchText || '',
+        SearchText: data.searchText || data.SearchText || '',
       },
     };
+
+    for (let key in data) {
+      if (!params.Request.hasOwnProperty(key)) {
+        params.Request[key] = data[key];
+      }
+    }
 
     return new Promise((resolve, reject) =>
       client.Client_x0020_Service.Client_x0020_ServiceSoap.GetClients(
